@@ -1,3 +1,4 @@
+import UserTabs from "@/components/layout/UserTabs";
 import Image from "next/image";
 import Link from "next/link"
 import { useState } from "react";
@@ -57,6 +58,7 @@ export const ProfilePage = () => {
   const userImage = session.data.user.image;
   return (
     <section className="mt-8">
+       <UserTabs isAdmin={isAdmin} />
       <div className="flex mx-auto gap-2 tabs justify-center flex-wrap">
       <Link
         // className={path === '/profile' ? 'active' : ''}
