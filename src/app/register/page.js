@@ -1,4 +1,5 @@
 "use client";
+import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -70,7 +71,7 @@ const RegisterPage = () => {
           or login with provider
         </div>
         <button
-          // onClick={() => signIn('google', {callbackUrl:'/'})}
+          onClick={() => signIn('google', {callbackUrl:'/'})}
           className="flex gap-4 justify-center"
         >
           <Image src={"/google.png"} alt={""} width={24} height={24} />
