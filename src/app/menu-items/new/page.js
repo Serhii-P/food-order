@@ -16,6 +16,7 @@ export default function NewMenuItemPage() {
   const {loading, data} = useProfile();
 
   async function handleFormSubmit(ev, data) {
+    console.log(data);
     ev.preventDefault();
     const savingPromise = new Promise(async (resolve, reject) => {
       const response = await fetch('/api/menu-items', {
@@ -32,7 +33,7 @@ export default function NewMenuItemPage() {
     await toast.promise(savingPromise, {
       loading: 'Saving this tasty item',
       success: 'Saved',
-      error: 'Error',
+      error: 'Error123',
     });
 
     setRedirectToItems(true);

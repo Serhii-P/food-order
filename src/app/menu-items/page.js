@@ -1,5 +1,6 @@
 'use client';
-import Right from "@/components/icons/Right";
+import { Right } from "@/components/icons/Right";
+// import Right from "@/components/icons/Right";
 import UserTabs from "@/components/layout/UserTabs";
 import {useProfile} from "@/components/UseProfile";
 import Image from "next/image";
