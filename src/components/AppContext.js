@@ -35,6 +35,7 @@ export function AppProvider({children}) {
   }
 
   function removeCartProduct(indexToRemove) {
+    console.log(indexToRemove);
     setCartProducts(prevCartProducts => {
       const newCartProducts = prevCartProducts
         .filter((v,index) => index !== indexToRemove);
